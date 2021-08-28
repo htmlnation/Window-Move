@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>My HTML application</title>
+<HTA:APPLICATION
+  APPLICATIONNAME="ation"
+  ID="MyHTMLapplication"
+  VERSION="1.0"
+  CAPTION="no"
+  SYSMENU="no"
+  scroll="no"
+  showInTaskbar="yes"
+  MAXIMIZEBUTTON="no"
+  MINIMIZEBUTTON="no"/>
+ 
+ 
+</head>
+
+<script language="VBScript">
+window.resizeTo 100,100
+Dim oFSO, oTxtFile
+Set oFSO = CreateObject("Scripting.FileSystemObject")
+ 
+Sub Window_OnLoad
+ Dim a
+ Dim b
+ a = 0
+ a1(a)
+ idTimer = window.setTimeout("a1", 500, "VBScript")
+End Sub
+
+Sub a1(a)
+Do
+  Do
+   window.moveTo a, b
+   a = a + 1
+   document.body.bgColor="red"
+   Loop Until a = 900
+ a = 1
+ b = b + 5 
+ document.body.bgColor="black"
+Loop Until b = 500
+ Set oTxtFile = oFSO.CreateTextFile("C:\target\CAD " & a & ".txt")
+ me.close
+End Sub
+
+
+
+
+ 
+</script>
+
+
+
+<!--img src="c:\image.jpg">
+
+<!--Add your controls here-->
+
+<!--{{InsertControlsHere}}-Do not remove this line-->
+</body>
+</html>
